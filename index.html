@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicios de 3 casas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top no-print">
+  <div class="brand">Servicios de 3 casas</div>
+  <div class="period-box">
+    <label for="periodSelect">Período activo</label>
+    <select id="periodSelect"></select>
+  </div>
+  <span id="saveStatus" class="status" role="status" aria-live="polite">Guardado</span>
+</header>
+<nav class="tabs no-print" aria-label="Secciones">
+  <button data-go="summary">Resumen</button>
+  <button data-go="bills">Recibos</button>
+  <button data-go="houses">Casas y apartamentos</button>
+  <button data-go="settle">Liquidaciones</button>
+  <button data-go="history">Historial y respaldos</button>
+</nav>
+<div id="banner" class="no-print"></div>
+<main>
+  <section id="sec-summary"><h2>Resumen</h2><div id="summary"></div></section>
+  <section id="sec-bills">
+    <h2>Ingresar recibos</h2>
+    <div id="grand" class="grand"></div>
+    <p class="note">Los importes se reparten según las personas actuales de cada apartamento durante todo el período; no se prorratea por días.</p>
+    <div id="bills" class="grid"></div>
+    <div class="actions"><button class="primary big" data-act="save-period">Guardar período</button></div>
+  </section>
+  <section id="sec-houses"><h2>Casas y apartamentos</h2><div id="houses"></div></section>
+  <section id="sec-settle"><h2>Liquidaciones</h2><div id="settle"></div></section>
+  <section id="sec-history"><h2>Historial y respaldos</h2><div id="history"></div></section>
+</main>
+<footer class="no-print">Los datos se guardan en este navegador y no se sincronizan entre dispositivos. Exporta copias de seguridad con frecuencia.</footer>
+<script src="app.js"></script>
+</body>
+</html>
